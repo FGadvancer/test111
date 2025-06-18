@@ -96,6 +96,7 @@ type LoginMgr struct {
 	third        *third.Third
 	token        string
 	loginUserID  string
+	a            string
 	connListener open_im_sdk_callback.OnConnListener
 
 	justOnceFlag bool
