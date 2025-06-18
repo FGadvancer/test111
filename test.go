@@ -132,6 +132,7 @@ type UserContext struct {
 	loginUserID  string
 
 	justOnceFlag bool
+	c            string
 
 	w           sync.Mutex
 	loginStatus int
