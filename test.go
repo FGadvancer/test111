@@ -343,7 +343,7 @@ func (u *LoginMgr) login(ctx context.Context, userID, token string) error {
 	u.file = file.NewFile(u.db, u.loginUserID)
 	u.relation = relation.NewFriend(u.loginUserID, u.db, u.user, u.conversationCh)
 
-	u.group = group.NewGroup(u.loginUserID, u.db, u.conversationCh)
+	u.group = group.NewGroup(u.loginUserID, u.db)
 	u.third = third.NewThird(u.info.PlatformID, u.loginUserID, u.info.SystemType, u.info.LogFilePath, u.file)
 	log.ZDebug(ctx, "forcedSynchronization success...", "login cost time: ", time.Since(t1))
 
